@@ -21,7 +21,7 @@ function App() {
         'AI Automation instantly qualifies leads based on your criteria, 24/7',
       icon: <UserCheck className="w-8 h-8 text-blue-400" />,
       image:
-        'https://storage.googleapis.com/msgsndr/8ZRWeTVNflmzUVleED5f/media/677d992965b87e606d17cea0.jpeg',
+        'https://storage.googleapis.com/msgsndr/8ZRWeTVNflmzUVleED5f/media/677e60d3ff37a3fd6b22d096.jpeg',
     },
     {
       pain: 'Spending Days on Manual Follow-ups',
@@ -29,7 +29,7 @@ function App() {
         'Automated multi-channel follow-ups via email, SMS, calls, and WhatsApp',
       icon: <Phone className="w-8 h-8 text-blue-400" />,
       image:
-        'https://storage.googleapis.com/msgsndr/8ZRWeTVNflmzUVleED5f/media/677d98af9c24d968aa1bb29e.jpeg',
+        'https://storage.googleapis.com/msgsndr/8ZRWeTVNflmzUVleED5f/media/677e6086fe103bf3a52c895c.jpeg',
     },
     {
       pain: 'Missing Appointments & Opportunities',
@@ -52,6 +52,7 @@ function App() {
         'Analytics review',
         '20-min strategy session',
       ],
+      backgroundImage: 'https://storage.googleapis.com/msgsndr/8ZRWeTVNflmzUVleED5f/media/677e6cae70ab1713e1261d9b.png',
     },
     {
       name: 'Vanguard AI Propel',
@@ -64,6 +65,7 @@ function App() {
         'AI-driven lead scoring',
         'Weekly consultation',
       ],
+      backgroundImage: 'https://storage.googleapis.com/msgsndr/8ZRWeTVNflmzUVleED5f/media/677e6caeb20eac352def54bb.png',
     },
     {
       name: 'Vanguard AI Ascend',
@@ -76,6 +78,7 @@ function App() {
         'Advanced ad strategy',
         'Weekly strategy calls',
       ],
+      backgroundImage: 'https://storage.googleapis.com/msgsndr/8ZRWeTVNflmzUVleED5f/media/677e6caefe103b50162c952f.png',
     },
     {
       name: 'Vanguard AI Pinnacle',
@@ -88,6 +91,7 @@ function App() {
         'Dedicated support',
         'Advanced analytics',
       ],
+      backgroundImage: 'https://storage.googleapis.com/msgsndr/8ZRWeTVNflmzUVleED5f/media/677e6caeff37a3aaa022dbe4.png',
     },
     {
       name: 'Vanguard AI Infinity',
@@ -100,6 +104,7 @@ function App() {
         'Custom AI models',
         'Unlimited everything',
       ],
+      backgroundImage: 'https://storage.googleapis.com/msgsndr/8ZRWeTVNflmzUVleED5f/media/677e6ece70ab174ace2628eb.png'
     },
   ];
 
@@ -157,11 +162,16 @@ function App() {
               </p>
             </div>
             <div className="flex-1">
-              <img
-                src="https://storage.googleapis.com/msgsndr/8ZRWeTVNflmzUVleED5f/media/677d9a49012edf7b80739a30.jpeg"
-                alt="AI Visualization"
-                className="rounded-xl shadow-2xl shadow-blue-500/20"
-              />
+            <video
+    src="https://storage.googleapis.com/msgsndr/8ZRWeTVNflmzUVleED5f/media/677e6097f9e1e15f87153c6d.mp4"
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="rounded-xl shadow-2xl shadow-blue-500/20"
+  >
+    Your browser does not support the video tag.
+  </video>
             </div>
           </div>
         </div>
@@ -301,6 +311,13 @@ function App() {
             {packages.map((pkg, index) => (
               <div
                 key={index}
+                style={{
+                  backgroundImage: `url(${pkg.backgroundImage})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  height: '372px',
+                  opacity: 1, // Yüksekliği ayarlayabilirsiniz
+                }}
                 className={`bg-gradient-to-b from-slate-800 to-slate-900 rounded-xl p-8 ${
                   index === 4 ? 'lg:col-span-3 md:col-span-2' : ''
                 }`}
